@@ -207,21 +207,21 @@ Resources:
       Tags:
         - Key: Name
           Value: MyInstance
-    EC2SecurityGroup1:
-      Type: "AWS::EC2::SecurityGroup"
-      Properties:
-        GroupDescription: EC2SecurityGroupPublic
-        VpcId: !Ref VPC1
-        SecurityGroupIngress:
-          - CidrIP: 0.0.0.0/0
-            FromPort: 22
-            ToPort: 22
-            IpProtocol: tcp
-          - CidrIP: 0.0.0.0/0
-            FromPort: 80
-            ToPort: 80
-            IpProtocol: tcp
-        GroupName: ACG_SG
-        Tags:
-          - Key: Name
-            Value: ACG_SG
+  EC2SecurityGroup1:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      GroupDescription: EC2SecurityGroupPublic
+      VpcId: !Ref VPC1
+      SecurityGroupIngress:
+        - CidrIP: 0.0.0.0/0
+          FromPort: 22
+          ToPort: 22
+          IpProtocol: tcp
+        - CidrIP: 0.0.0.0/0
+          FromPort: 80
+          ToPort: 80
+          IpProtocol: tcp
+      GroupName: ACG_SG
+      Tags:
+        - Key: Name
+          Value: ACG_SG
