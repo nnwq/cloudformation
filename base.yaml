@@ -200,7 +200,7 @@ Resources:
       NetworkInterfaces:
         - GroupSet:
             - !Ref EC2SecurityGroup1
-          AssociatePublicIPAdress: "true"
+          AssociatePublicIPAddress: "true"
           DeviceIndex: "0"
           DeleteOnTermination: "true"
           SubnetId: !Ref VPC1PublicSubnet1
